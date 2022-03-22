@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index">Home<span class="sr-only">(current)</span></a>
         </li>
                  
         <li class="nav-item dropdown">
@@ -27,12 +27,10 @@
             Ordenar
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Nome</a>
-            <a class="dropdown-item" href="#">Produtora</a>
-            <a class="dropdown-item" href="#">Nota Alta</a>
-            <a class="dropdown-item" href="#">Nota Baixa</a>
-            <a class="dropdown-item" href="#">Mostrar Todos</a>
-
+                <a class="dropdown-item" href="ordemAlfa">Nome</a>
+                <a class="dropdown-item" href="ordemProdutora">Produtora</a>
+                <a class="dropdown-item" href="ordemNa">Nota Alta</a>
+                <a class="dropdown-item" href="ordemNb">Nota Baixa</a>
             </div>
         </li>
         <li class="nav-item ">
@@ -48,27 +46,19 @@
     
 
     <h1 > <span class="badge badge-secondary " >Escolha o Jogo</span></h1>
-
-    <table class="table table-striped" id="listagem">
-        <thead>
-           
-        </thead>
-        <tbody>
-        
-         @foreach($jogo as $jogos )
-             
-        
-          <tr>
-              
-            <td><img src='fotos/{{$jogos->capa}}' class = 'mini'/></td>
-            <td>{{$jogos->nome ."  "}}{{$jogos->genero}}</td>         
-          </tr>
-
-          @endforeach
-        </tbody>
-      </table>
-
-
+    <div class="tab">
+        <table class="table table-striped" id="listagem">
+            <tbody>            
+                @foreach($jogo as $jogos )
+                <tr>
+                    <td><img src='fotos/{{$jogos->capa}}' class = 'mini'/></td>
+                    <td>{{$jogos->nome ."  "}}{{"[".$jogos->genero->genero."]"}} <br>
+                    <strong>{{$jogos->produtora->produtora}}</strong></td>    
+                </tr>
+                @endforeach
+                </tbody>
+        </table>
+    </div>
 </body>
 
 

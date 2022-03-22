@@ -16,13 +16,17 @@ return new class extends Migration
         Schema::create('jogos', function(Blueprint $table){
             $table->id('cod');
             $table->string('nome', 40);
-            $table->integer('genero');
-            $table->integer('produtora');
+            $table->Integer('genero_cod');
+            $table->Integer('produtora_cod');
             $table->text('descricao');
             $table->decimal('nota', 4,2);
             $table->string('capa', 40);
-
+            $table->index('genero_cod');
+           $table->index('produtora_cod');
+           
         });
+
+       
     }
 
     /**

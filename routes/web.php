@@ -21,5 +21,9 @@ Route::get('/', function () {
     return view('index');
 });*/
 
-Route::get('index' , 'App\Http\Controllers\UsuariosController@mostrarJogos');
+Route::get('index' , 'App\Http\Controllers\UsuariosController@mostrarJogos')->name('index');
+Route::get('ordemAlfa' , 'App\Http\Controllers\UsuariosController@ordemAlfa');
+Route::get('ordemProdutora' , 'App\Http\Controllers\UsuariosController@ordmProdutora');
+Route::get('ordemNa' , 'App\Http\Controllers\UsuariosController@ordemNa');
+Route::get('ordemNb' , 'App\Http\Controllers\UsuariosController@ordemNb');
 
