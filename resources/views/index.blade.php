@@ -54,17 +54,17 @@
            
         </thead>
         <tbody>
-         
+        
+         @foreach($jogo as $jogos )
+             
+        
           <tr>
               
-            <td><img src='fotos/cod.png' class = 'mini'/></td>
-            <td>Jacob</td>         
+            <td><img src='fotos/{{$jogos->capa}}' class = 'mini'/></td>
+            <td>{{$jogos->nome ."  "}}{{$jogos->genero}}</td>         
           </tr>
-          <tr>
-            <td><img src='fotos/cs.png' class = 'mini'/></td>
-            <td>Jacob</td>         
-          </tr>        
-          </tr>
+
+          @endforeach
         </tbody>
       </table>
 
