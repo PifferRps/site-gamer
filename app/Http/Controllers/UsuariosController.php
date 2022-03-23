@@ -21,8 +21,8 @@ class UsuariosController extends Controller
 
     public function ordemAlfa(){
         $jogo= Jogo::orderby('nome','asc')->get();
-        $count = count($jogo);
-        dd($count);
+        
+        
         return view('index', compact('jogo'));
     }
    
@@ -35,9 +35,8 @@ class UsuariosController extends Controller
             echo '</pre>';
         });*/
         $jogo = JogoRepository::getJogos();
-        $count = count($jogo);
-        dd($count);
-        return view('index', compact('jogo'));
+        $produ = 1;
+        return view('index', compact('jogo','produ'));
     }
    
     public function ordemNa(){

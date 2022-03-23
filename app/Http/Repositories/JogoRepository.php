@@ -14,6 +14,7 @@ class JogoRepository
 
     }
 
+ 
 }
 
-//?string $ordem = null 
+//?string $ordem = null  select * from `jogos` inner join `produtoras8` on `jogos`.`produtora_cod` = `produtoras`.`cod` order by `produtoras`.`produtora` asc
