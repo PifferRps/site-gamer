@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 Route::get('index' , 'App\Http\Controllers\UsuariosController@mostrarJogos')->name('index');
 Route::get('ordemAlfa' , 'App\Http\Controllers\UsuariosController@ordemAlfa');
-Route::get('ordemProdutora' , 'App\Http\Controllers\UsuariosController@ordmProdutora');
+Route::get('ordemProdutora' , 'App\Http\Controllers\UsuariosController@ordemProdutora');
 Route::get('ordemNa' , 'App\Http\Controllers\UsuariosController@ordemNa');
 Route::get('ordemNb' , 'App\Http\Controllers\UsuariosController@ordemNb');
 

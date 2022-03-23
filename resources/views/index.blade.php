@@ -53,7 +53,7 @@
                 <tr>
                     <td><img src='fotos/{{$jogos->capa}}' class = 'mini'/></td>
                     <td>{{$jogos->nome ."  "}}{{"[".$jogos->genero->genero."]"}} <br>
-                    <strong>{{$jogos->produtora->produtora}}</strong></td>    
+                    <strong>{{$jogos->produtora}}</strong></td>    
                 </tr>
                 @endforeach
                 </tbody>
