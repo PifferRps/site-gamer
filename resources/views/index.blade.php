@@ -8,10 +8,16 @@
             <tr>
                 
                 <td><img src='fotos/{{$jogos->capa}}' class = 'mini'/></td>
-                <td>{{$jogos->nome ."  "}}{{"[".$jogos->genero->genero."]"}} <br>
+                <td>{{$jogos->nome ."  "}}
+                    @if(!empty($gene))
+                    {{"[".$jogos->genero."]"}} <br>
+                    @else
+                    {{"[".$jogos->genero->genero."]"}} <br>
+                    @endif
                     
-                    @if(!empty($produ))
-                      <strong>{{$jogos->produtora}}</strong></td>
+                    
+                    @if(!empty($produ)||!empty($gene))
+                      <strong>{{ $jogos->produtora}}</strong></td>
                       @else
                       <strong>{{$jogos->produtora->produtora}}</strong></td>
                     @endif

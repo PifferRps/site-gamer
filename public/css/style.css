@@ -7,29 +7,29 @@ table#listagem{
     width: 100%;
     text-align: left;
     border-collapse: collapse;
-    
+   
    
 }
 
 table#listagem tr{
     height: 50px;
-   
+    
 
 }
 table#listagem td{
     border: 1px solid #ddd;
     padding: 10px;
-  
+    vertical-align: middle;
     
 }
 
 table#listagem td:nth-child(1){
     width: 50px;
-   ;
+    
 }
 table#listagem td:nth-child(3){
     width: 90px;
-
+    
 }
 
 h1{
