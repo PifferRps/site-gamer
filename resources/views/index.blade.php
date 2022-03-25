@@ -1,5 +1,6 @@
 @extends('layout')
 @section('section')
+<h1 > <span class="badge badge-secondary " >Escolha o Jogo</span></h1>
 <div class="tab">
     <table class="table table-striped" id="listagem">
         <tbody>            

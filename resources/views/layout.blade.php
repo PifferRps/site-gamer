@@ -45,7 +45,7 @@
     </nav>
     
 
-    <h1 > <span class="badge badge-secondary " >Escolha o Jogo</span></h1>
+  
     @yield('section')
  
 </body>
