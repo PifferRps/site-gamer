@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Auth\Access\Gate;
-use Illuminate\Support\Facades\Gate as FacadesGate;
+
+
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Gate;
 
 /*
 |--------------------------------------------------------------------------
