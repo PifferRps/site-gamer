@@ -16,8 +16,14 @@ return new class extends Migration
         Schema::create('usuarios', function(Blueprint $table){
             $table->string('usuario',10)->primary();
             $table->string('nome',30);
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('senha',80);
             $table->string('tipo',10);
+            $table->rememberToken();
+            $table->foreignId('current_team_id')->nullable();
+            $table->string('profile_photo_path', 2048)->nullable();
+            $table->timestamps();
         });
     }
 
