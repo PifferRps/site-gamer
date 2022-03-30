@@ -66,6 +66,11 @@ class UsuariosController extends Controller
         return view('index', compact('jogo','gene'));
     }
    
+    public function registro(Request $request){
+        $request = $request->all();
+       dd("to aqui");
+        return view('index', compact('jogo','gene'));
+    }
 
     
 }

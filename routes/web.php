@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Gate;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('login', function () {
+    return view('login');
+});
+Route::get('registro', function () {
+    return view('registro');
 });
 
 /*Route::get('/index', function () {
@@ -30,6 +33,7 @@ Route::get('ordemProdutora' , 'App\Http\Controllers\UsuariosController@ordemProd
 Route::get('ordemNa' , 'App\Http\Controllers\UsuariosController@ordemNa');
 Route::get('ordemNb' , 'App\Http\Controllers\UsuariosController@ordemNb');
 Route::post('pesquisar' , 'App\Http\Controllers\UsuariosController@pesquisar');
+Route::post('registro' , 'App\Http\Controllers\UsuariosController@registro');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
   //  $user = auth()->user();
