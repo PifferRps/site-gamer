@@ -19,33 +19,33 @@ use Illuminate\Support\Facades\Gate;
 Route::get('login', function () {
     return view('login');
 });
-Route::get('registro', function () {
-    return view('registro');
+
+
+Route::get('/alerta', function () {
+    return view('alerta');
 });
 
-/*Route::get('/index', function () {
-    return view('index');
-});*/
+Route::get('index', 'App\Http\Controllers\UsuariosController@mostrarJogos')->name('index');
+Route::get('ordemAlfa', 'App\Http\Controllers\UsuariosController@ordemAlfa');
+Route::get('ordemProdutora', 'App\Http\Controllers\UsuariosController@ordemProdutora');
+Route::get('ordemNa', 'App\Http\Controllers\UsuariosController@ordemNa');
+Route::get('ordemNb', 'App\Http\Controllers\UsuariosController@ordemNb');
+Route::post('pesquisar', 'App\Http\Controllers\UsuariosController@pesquisar');
 
-Route::get('index' , 'App\Http\Controllers\UsuariosController@mostrarJogos')->name('index');
-Route::get('ordemAlfa' , 'App\Http\Controllers\UsuariosController@ordemAlfa');
-Route::get('ordemProdutora' , 'App\Http\Controllers\UsuariosController@ordemProdutora');
-Route::get('ordemNa' , 'App\Http\Controllers\UsuariosController@ordemNa');
-Route::get('ordemNb' , 'App\Http\Controllers\UsuariosController@ordemNb');
-Route::post('pesquisar' , 'App\Http\Controllers\UsuariosController@pesquisar');
-Route::post('registro' , 'App\Http\Controllers\UsuariosController@registro');
+Route::get('registro', 'App\Http\Controllers\RegistroController@getValidate');
+Route::post('registro', 'App\Http\Controllers\RegistroController@postValidate');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-  //  $user = auth()->user();
- 
+    //  $user = auth()->user();
+
     return view('dashboard');
 })->name('dashboard');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/teste', function () {
-    if (! Gate::allows('realizar-venda')) {
-      return 'voce n esta autorizado';
-    }else{
+    if (!Gate::allows('realizar-venda')) {
+        return 'voce n esta autorizado';
+    } else {
         return 'voce esta outorizado';
     }
 })->name('dashboard');

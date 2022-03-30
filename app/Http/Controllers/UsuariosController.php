@@ -6,8 +6,11 @@ use App\Http\Repositories\JogoRepository;
 use App\Models\Genero;
 use App\Models\Jogo;
 use App\Models\Produtora;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Symfony\Component\Console\Input\Input;
 
 class UsuariosController extends Controller
 {
@@ -66,12 +69,6 @@ class UsuariosController extends Controller
         return view('index', compact('jogo','gene'));
     }
    
-    public function registro(Request $request){
-        $request = $request->all();
-       dd("to aqui");
-        return view('index', compact('jogo','gene'));
-    }
-
     
 }
 //?string $ordem = null  select * from `jogos` inner join `produtoras8` on `jogos`.`produtora_cod` = `produtoras`.`cod` order by `produtoras`.`produtora` asc
