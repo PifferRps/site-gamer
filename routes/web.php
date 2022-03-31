@@ -35,6 +35,8 @@ Route::post('pesquisar', 'App\Http\Controllers\UsuariosController@pesquisar');
 Route::get('registro', 'App\Http\Controllers\RegistroController@getValidate');
 Route::post('registro', 'App\Http\Controllers\RegistroController@postValidate');
 
+Route::post('login', 'App\Http\Controllers\UsuariosController@entrarLogin');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     //  $user = auth()->user();
 

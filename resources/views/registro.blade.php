@@ -29,7 +29,7 @@
 
         <!--<div class="main-login main-center col-md-12">-->
 
-        <div class="card col-sm-5 main-center">
+        <div class="card col-md-5 offset-md-3 mt-2">
 
             <div class="card-body ">
                 <form class="form-horizontal" method="post" action="registro">
@@ -85,7 +85,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock fa-lg"
-                                        aria-hidden="true"></i></span>
+                                    aria-hidden="true"></i></span>
                                 <input type="password" class="form-control" name="confirm" id="confirm"
                                     placeholder="Confirma a senha" required />
                             </div>
@@ -109,7 +109,6 @@
         </div>
     </div>
     </div>
-
 
 
 
