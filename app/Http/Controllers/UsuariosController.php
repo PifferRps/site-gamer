@@ -15,25 +15,30 @@ use Symfony\Component\Console\Input\Input;
 class UsuariosController extends Controller
 {
 
+   
 
     public function entrarLogin(Request $request)
     {
         $usuario = trim($request->login);
         $senha = trim($request->senha);
-        
-        $usuario = Usuario::where('nome',$usuario)->first();
-       // dd($usuario);
-        if(!$usuario){
+
+        $usuario = Usuario::where('nome', $usuario)->first();
+        // dd($usuario);
+        if (!$usuario) {
             echo ('Nok');
             return;
         }
-        if(!Hash::check($senha,$usuario->senha)){
+        if (!Hash::check($senha, $usuario->senha)) {
             echo ('NOK');
             return;
         }
+
+        session()->put('usuario',$usuario);
+        //dd(session());
+        return redirect()->route('index');
     }
 
-     public function mostrarJogos()
+    public function mostrarJogos()
     {
 
         $jogo = Jogo::get();

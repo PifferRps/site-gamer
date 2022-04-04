@@ -34,7 +34,12 @@
                     </div>
                 </li>
                 <li class="nav-item ">
+                    @if(session()->has('usuario'))
+                    <a class="nav-link " href="#">{{session()}}</a>
+                    @else
                     <a class="nav-link " href="login">Login</a>
+                    @endif
+                   
                 </li>
             </ul>
             @include('_form_pesquisa')
