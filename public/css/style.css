@@ -7,9 +7,13 @@ table#listagem{
     width: 100%;
     text-align: left;
     border-collapse: collapse;
-   
-   
 }
+
+span.material-icons{
+  text-align: center;
+  
+}
+
 
 table#listagem tr{
     height: 50px;
@@ -28,7 +32,8 @@ table#listagem td:nth-child(1){
     
 }
 table#listagem td:nth-child(3){
-    width: 90px;
+    width: 120px;
+    text-align: center;
     
 }
 

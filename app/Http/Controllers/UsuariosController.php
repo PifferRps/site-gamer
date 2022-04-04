@@ -15,7 +15,20 @@ use Symfony\Component\Console\Input\Input;
 class UsuariosController extends Controller
 {
 
-   
+    public function login()
+    {
+        if(session()->has('usuario')){
+            return redirect()->route('index');
+        }
+        return view('loginn');    
+    }
+
+    public function logout()
+        {
+            session()->forget('usuario');
+            return redirect()->route('index');
+            
+        }
 
     public function entrarLogin(Request $request)
     {

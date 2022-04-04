@@ -20,6 +20,13 @@
                     @else
                         <strong>{{ $jogos->produtora->produtora }}</strong></td>
                 @endif
+                <td>
+                    @if (session()->has('usuario') && session('usuario')->tipo == 'admin')
+                    <span class="material-icons">add_circle</span>
+                    <span class="material-icons">edit</span>
+                    @endif
+                    <span class="material-icons">shopping_cart</span>
+                </td>
                 </tr>
                 @endforeach
             </tbody>

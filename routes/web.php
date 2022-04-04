@@ -16,9 +16,6 @@ use Illuminate\Support\Facades\Gate;
 |
 */
 
-Route::get('login', function () {
-    return view('login');
-});
 
 
 Route::get('/alerta', function () {
@@ -35,7 +32,10 @@ Route::post('pesquisar', 'App\Http\Controllers\UsuariosController@pesquisar');
 Route::get('registro', 'App\Http\Controllers\RegistroController@getValidate');
 Route::post('registro', 'App\Http\Controllers\RegistroController@postValidate');
 
-Route::post('login', 'App\Http\Controllers\UsuariosController@entrarLogin');
+Route::get('loginn', 'App\Http\Controllers\UsuariosController@login');
+Route::post('loginn', 'App\Http\Controllers\UsuariosController@entrarLogin');
+
+Route::get('logout', 'App\Http\Controllers\UsuariosController@logout');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     //  $user = auth()->user();
