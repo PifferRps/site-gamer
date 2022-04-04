@@ -20,6 +20,9 @@ class RegistroController extends Controller
             'password' => 'required|min:8|max:255',
             'confirm'  => 'required|same:password'
         ]);
+        
+     
+
         $request->toArray();
         $usuario = new Usuario();
         $usuario->nome = $request->name;

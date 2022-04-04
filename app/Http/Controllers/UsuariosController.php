@@ -16,9 +16,21 @@ class UsuariosController extends Controller
 {
 
 
-    public function entrarLogin()
+    public function entrarLogin(Request $request)
     {
-        dd('aqui');
+        $usuario = trim($request->login);
+        $senha = trim($request->senha);
+        
+        $usuario = Usuario::where('nome',$usuario)->first();
+       // dd($usuario);
+        if(!$usuario){
+            echo ('Nok');
+            return;
+        }
+        if(!Hash::check($senha,$usuario->senha)){
+            echo ('NOK');
+            return;
+        }
     }
 
      public function mostrarJogos()
