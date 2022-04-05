@@ -35,7 +35,7 @@
                         <a class="dropdown-item" href="ordemNb">Nota Baixa</a>
                     </div>
                 </li>
-                <li class="nav">
+                <li class="nav" id="log">
                     @if(session()->has('usuario'))
                     <a class="nav-link " href="#">{{session('usuario')->nome}}</a>
                     <a class="nav-link" href="#">|</a>

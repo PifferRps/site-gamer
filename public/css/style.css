@@ -37,6 +37,11 @@ table#listagem td:nth-child(3){
     
 }
 
+li#log{
+  text-align: right;
+
+}
+
 h1{
     text-align: center;
 }

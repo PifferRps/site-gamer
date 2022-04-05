@@ -21,8 +21,6 @@ class RegistroController extends Controller
             'confirm'  => 'required|same:password'
         ]);
         
-     
-
         $request->toArray();
         $usuario = new Usuario();
         $usuario->nome = $request->name;
