@@ -17,10 +17,11 @@ use Illuminate\Support\Facades\Gate;
 */
 
 
-
 Route::get('/alerta', function () {
     return view('alerta');
 });
+Route::get('detalhes/{id}', 'App\Http\Controllers\UsuariosController@mostrarDetalhes')->name('detalhes');
+
 
 Route::get('index', 'App\Http\Controllers\UsuariosController@mostrarJogos')->name('index');
 Route::get('ordemAlfa', 'App\Http\Controllers\UsuariosController@ordemAlfa');

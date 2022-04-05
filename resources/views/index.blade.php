@@ -4,10 +4,12 @@
     <div class="tab">
         <table class="table table-striped" id="listagem">
             <tbody>
+                
                 @foreach ($jogo as $jogos)
+               
                     <tr>
                         <td><img src='fotos/{{ $jogos->capa }}' class='mini' /></td>
-                        <td>{{ $jogos->nome . '  ' }}
+                        <td><a href="{{route('detalhes',$jogos->cod)}}"> {{ $jogos->nome . '  ' }}</a>
                             @if (!empty($gene))
                                 {{ '[' . $jogos->genero . ']' }} <br>
                             @else

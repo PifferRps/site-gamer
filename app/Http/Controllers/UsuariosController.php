@@ -10,6 +10,7 @@ use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use League\CommonMark\Extension\CommonMark\Node\Inline\Code;
 use Symfony\Component\Console\Input\Input;
 
 class UsuariosController extends Controller
@@ -58,6 +59,13 @@ class UsuariosController extends Controller
 
         //  dd($jogo);
         return view('index', compact('jogo'));
+    }
+
+    public function mostrarDetalhes($id)
+    {
+        $jogo = Jogo::where('cod', $id)->get();
+        //dd($jogo);
+        return view('detalhes', compact('jogo'));
     }
 
 

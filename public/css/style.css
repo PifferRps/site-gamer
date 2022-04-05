@@ -13,7 +13,19 @@ span.material-icons{
   text-align: center;
   
 }
-
+table.detalhes {
+  width: 100%;
+}
+table.detalhes td{
+  padding: 10px;
+  vertical-align: top;
+}
+img.mini{
+  width: 100px;
+}
+img.full{
+  height: 400px;
+}
 
 table#listagem tr{
     height: 50px;
@@ -37,10 +49,7 @@ table#listagem td:nth-child(3){
     
 }
 
-li#log{
-  text-align: right;
 
-}
 
 h1{
     text-align: center;
@@ -255,8 +264,6 @@ div#formFooter a{
   input[type=password]:placeholder {
     color: #cccccc;
   }
-  
-  
   
   /* ANIMATIONS */
   
