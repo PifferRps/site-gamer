@@ -25,6 +25,7 @@
 </head>
 
 <body>
+
     <div class="container">
 
         <!--<div class="main-login main-center col-md-12">-->
@@ -32,6 +33,15 @@
         <div class="card col-md-5 offset-md-3 mt-2">
 
             <div class="card-body ">
+                <div>
+                    @if (!empty($errors->all()))
+                        <ul class="alert alert-danger">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                    @endif
+
+                </div>
                 <form class="form-horizontal" method="post" action="registro">
                     {!! csrf_field() !!}
                     <div class="form-group">
@@ -56,7 +66,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label for="username" class="cols-sm-2 control-label">Tipo Usuário</label>
                         <div class="cols-sm-10">
@@ -67,7 +76,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label for="password" class="cols-sm-2 control-label">Senha</label>
                         <div class="cols-sm-10">
@@ -85,7 +93,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock fa-lg"
-                                    aria-hidden="true"></i></span>
+                                        aria-hidden="true"></i></span>
                                 <input type="password" class="form-control" name="confirm" id="confirm"
                                     placeholder="Confirma a senha" required />
                             </div>
@@ -93,17 +101,14 @@
                     </div>
 
                     <div class="form-group ">
-                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Registrar</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Registrar</button>
                     </div>
                     <div class="login-register">
                         <a href="index">Voltar</a>
                     </div>
                 </form>
             </div>
-            <ul class="error">
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
+
 
 
         </div>
